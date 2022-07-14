@@ -43,7 +43,7 @@ app.get('/now', (req, res) => {
   
 
   var currDateJ = {
-    Date: currDate
+    Date: currDate.getMonth() + "/" + currDate.getDate() + "/" + currDate.getFullYear()
   }
 
   res.send(currDateJ)
