@@ -36,6 +36,21 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+//Current Date and Time 
+app.get('/now', (req, res) => {
+  let currDate = new Date()
+  console.log(currDate)
+  
+
+  var currDateJ = {
+    Date: currDate
+  }
+
+  res.send(currDateJ)
+
+})
+  
+
 //Health Link
 app.get('/health', (req, res) => {
   res.send('AD API Service is healthy!')
